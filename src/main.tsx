@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import HomePage from './pages/HomePage.tsx'
+import BigBoard from './pages/BigBoard.tsx'
 import NotFoundPage from './pages/NotFound.tsx'
 
 import './index.css'
@@ -13,7 +14,10 @@ const router = createBrowserRouter([
     element: <HomePage />,
     errorElement: <NotFoundPage />,
   },
-
+  {
+    path: '/bigboard',
+    element: <BigBoard />,
+  }
 
 ])
 
