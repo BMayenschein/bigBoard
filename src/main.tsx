@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import HomePage from './pages/HomePage.tsx'
 import BigBoard from './pages/BigBoard.tsx'
+import TierList from './pages/TierList.tsx'
 import NotFoundPage from './pages/NotFound.tsx'
 
 import './index.css'
@@ -15,8 +16,12 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
-    path: '/bigboard',
+    path: '/bigBoard',
     element: <BigBoard />,
+  },
+  {
+    path: '/tierList',
+    element: <TierList />,
   }
 
 ])
