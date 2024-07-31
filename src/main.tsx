@@ -8,6 +8,7 @@ import TierList from './pages/TierList.tsx'
 import NotFoundPage from './pages/NotFound.tsx'
 
 import './index.css'
+import MockBoard from './pages/MockBoard.tsx'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/tierList',
     element: <TierList />,
+  },
+  {
+    path: '/mockBoard',
+    element: <MockBoard />,
   }
 
 ])
