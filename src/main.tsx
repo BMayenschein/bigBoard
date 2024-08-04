@@ -5,10 +5,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/HomePage.tsx'
 import BigBoard from './pages/BigBoard.tsx'
 import TierList from './pages/TierList.tsx'
+import MockBoard from './pages/MockBoard.tsx'
 import NotFoundPage from './pages/NotFound.tsx'
 
 import './index.css'
-import MockBoard from './pages/MockBoard.tsx'
+
 
 const router = createBrowserRouter([
   {
