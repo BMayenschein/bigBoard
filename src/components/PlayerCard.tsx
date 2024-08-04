@@ -1,8 +1,6 @@
 type CardProps = {
+    playerData: JSON,
     srcImage: string,
-    altTxt: string,
-    title: string,
-    info: string,
     btnTxt: string,
 }
 
