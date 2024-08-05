@@ -1,10 +1,17 @@
-type CardProps = {
-    playerData: JSON,
+type PlayerCardProps = {
+    firstName: string,
+    lastName: string,
+    height: string,
+    position: string,
+    PTS: string,
+    REB: string,
+    AST: string,
+    altTxt: string,
     srcImage: string,
     btnTxt: string,
 }
 
-const Card = ({srcImage, altTxt, title, info, btnTxt} : CardProps) => {
+const PlayerCard = ({firstName, lastName, height, position, PTS, REB, AST, srcImage, altTxt, btnTxt} : PlayerCardProps) => {
     return (  
         <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure>
@@ -13,8 +20,9 @@ const Card = ({srcImage, altTxt, title, info, btnTxt} : CardProps) => {
                 alt={altTxt} />
             </figure>
         <div className="card-body">
-            <h2 className="card-title">{title}</h2>
-            <p>{info}</p>
+            <h2 className="card-title">{firstName} {lastName}</h2>
+            <p>{height} {position}</p>
+            <p>{PTS} | {REB} | {AST}</p>
             <div className="card-actions justify-end">
                 <button className="btn btn-primary">{btnTxt}</button>
             </div>
@@ -23,4 +31,4 @@ const Card = ({srcImage, altTxt, title, info, btnTxt} : CardProps) => {
     )
 }
 
-export default Card
+export default PlayerCard
