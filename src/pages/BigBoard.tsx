@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react"
 import PlayerCard from "../components/PlayerCard"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } from "@/components/ui/carousel"
 
 type PlayerInfo = {
     id: string,
@@ -29,16 +36,20 @@ const BigBoard = () => {
 
     return (
         <>
-            <div className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4">
-                {players.map((player, index) => (
-                    <div key={index} className="carousel-item">
-                        <PlayerCard firstName={player.firstName} lastName={player.lastName} height={player.height}
-                        position={player.position} PTS={player.PTS} REB={player.REB} AST={player.AST} btnTxt="Add to Board"
-                        srcImage="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-                        altTxt="player name"/>
-                    </div>
-                ))}
-            </div>
+            <Carousel opts={{loop: true, dragFree: true}}>
+                <CarouselContent>
+                    {players.map((player, index) => (
+                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                            <PlayerCard firstName={player.firstName} lastName={player.lastName} height={player.height}
+                            position={player.position} PTS={player.PTS} REB={player.REB} AST={player.AST} btnTxt="Add to Board"
+                            srcImage="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+                            altTxt="player name"/>
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+            </Carousel>
         </>
     )
 }
