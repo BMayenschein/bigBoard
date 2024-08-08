@@ -39,7 +39,7 @@ const BigBoard = () => {
             <Carousel opts={{loop: true, dragFree: true}}>
                 <CarouselContent>
                     {players.map((player, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                        <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
                             <PlayerCard firstName={player.firstName} lastName={player.lastName} height={player.height}
                             position={player.position} PTS={player.PTS} REB={player.REB} AST={player.AST} btnTxt="Add to Board"
                             srcImage="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
@@ -47,8 +47,6 @@ const BigBoard = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
             </Carousel>
         </>
     )
